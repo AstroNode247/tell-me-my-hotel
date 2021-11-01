@@ -13,4 +13,4 @@ Ceci est une application web de recommandation en ligne des hotêls developpée 
 * Python3 (version 3.9.7+) 
 * Recommandations: 
   * Anaconda3 (python 3.9)
-  * Activer un environnement et excécuter `conda install --yes --file requirements.txt`
+  * Activer un environnement et excécuter `conda install --yes --file recs_requirements.txt`
