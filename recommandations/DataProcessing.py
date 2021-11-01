@@ -5,6 +5,14 @@ import pandas as pd
 from tqdm import tqdm
 
 
+def to_json(data, prc):
+    data_list = []
+    for i in tqdm(range(0, int(len(data) * prc))):
+        data_list.append(json.loads(data[i]))
+
+    return data_list
+
+
 class RecsData:
     data = []
 
@@ -15,11 +23,9 @@ class RecsData:
             for line in tqdm(f):
                 self.data.append(line.strip())
 
-    def to_dataframe(self):
-        data_list = []
-        print('Parse into dictionnary')
-        for item in tqdm(self.data):
-            data_list.append(json.loads(item))
+    def to_dataframe(self, prc=1):
+        print('Parse into json')
+        data_list = to_json(self.data, prc=prc)
 
         keys = []
         for key in data_list[0]:
@@ -29,7 +35,7 @@ class RecsData:
         for key in keys:
             data_dict[key] = []
 
-        print('Clean the dictionnary')
+        print('Read to dataframe')
         for data in tqdm(data_list):
             for key in data_dict:
                 try:
