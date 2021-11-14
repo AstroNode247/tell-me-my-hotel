@@ -1,6 +1,6 @@
 # TellMeMyHotel
 
-Ceci est une application web de recommandation en ligne des hotêls developpée avec **Django/ReactJS**.
+Ceci est une application web de recommandation en ligne des hôtels developpée avec **Django/ReactJS**.
 
 ## Technologies
 
@@ -13,4 +13,6 @@ Ceci est une application web de recommandation en ligne des hotêls developpée 
 * Python3 (version 3.9.7+) 
 * Backend:
 	* Activer un environnement virtuel, s'il n'existe pas créer un nouveau environnement
-	* Excécuter `pip install -r requirements.txt`
+	* Exécuter `pip install -r requirements.txt`
+* Frontend:
+	* Exécuter `npm install`
