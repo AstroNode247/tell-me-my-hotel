@@ -17,9 +17,11 @@ class RecsData:
     
     def to_json(self, prc=1):
         json_data = []
-        for i in tqdm(range(0, int(len(self.data) * prc))):
+        
+        rand_idx = np.random.randint(len(self.data), size=int(len(self.data) * prc))
+        for i in tqdm(rand_idx):
             json_data.append(json.loads(self.data[i]))
-
+        
         return json_data
 
     def to_dataframe(self, prc=1):
@@ -46,3 +48,5 @@ class RecsData:
                     data_dict[key].append(np.nan)
 
         return pd.DataFrame(data_dict)
+
+    
