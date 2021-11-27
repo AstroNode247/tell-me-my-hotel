@@ -5,6 +5,6 @@ recommandations/__pycache__
 data/
 frontend/
 env/
-
 db.sqlite3
+
 **/__pycache__
